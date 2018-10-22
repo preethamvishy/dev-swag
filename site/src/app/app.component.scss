@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+.container {
+  margin-top: 10em;
+  margin-left: 5vw;
+  font-family: 'Quattrocento Sans', sans-serif;
+  
+}
+.masonry-item {
+  min-height: 300px;
+  .card::after {
+    content: '';
+  }
+  
+  .card {
+      width: 350px;
+      margin: 5px;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      background: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(black, 0.2);
+      .image {
+        width: 350px;
+        padding-bottom: 0.5em;
+    }
+    
+    .title {
+        font-size: 1.8em;
+        font: bold;
+        margin-bottom: 0.5em;
+        padding-left: 0.5em; 
+        padding-top: 0.5em; 
+    }
+    .desc {
+        padding: 1em;
+        margin-bottom: 1px;
+    }
+    .reference {
+      padding: 1em;
+      margin-top: 10px;
+      
+    }
+    .footer {
+      height: 2.7em;
+      margin-top: 1em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      background: #F3F3F3;
+      padding: 15px 40px;
+      color:gray;
+      text-align: center;
+        
+      .label {
+        display: block;
+        margin: 4px 0 0;
+        color: gray;
+        
+        .sublabel {
+          display: block;
+          font-size: 10px;
+        }
+        &:hover {
+    
+        }
+      }
+      
+    }
+    
+  }
+}
+
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: green;
+}
+
+a:active {
+  color: green;
+} 

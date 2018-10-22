@@ -1,0 +1,75 @@
+<div class="container">
+  <ngx-masonry class="grid" data-masonry='{ "itemSelector": ".card" , "horizontalOrder": true}'>
+    <ngxMasonryItem class="masonry-item" *ngFor="let item of swagItems">
+      <div class="card">
+        <div class="title">
+          {{item.name}}
+        </div>
+        <img class="image" [src]="item.image" alt="No image" />
+        <div [innerHTML]="item.description" class="desc">
+        </div>
+        <a [href]="item.reference" class="reference">
+          Check it out >
+        </a>
+        <div class="footer">
+          <div class="label">
+            <span>100</span>
+            <span class="sublabel">
+              Upvotes
+            </span>
+          </div>
+          <div class="label">
+            <span>{{item.difficulty}}</span>
+            <span class="sublabel">
+              Difficulty
+            </span>
+          </div>
+          <div class="label">
+            <span>100</span>
+            <span class="sublabel">
+              Swag Received
+            </span>
+          </div>
+        </div>
+      </div>
+   </ngxMasonryItem>
+  </ngx-masonry>
+</div>
+<!-- 
+<main role="main" class="tentu-content-container" (window:resize)="onResize(event)">
+  <div class="flex-container">
+    <div class="flex-item animated fadeIn" *ngFor="let item of swagItems">
+      <div class="card" (load)="resizeElementById('item')">
+        <div class="title">
+          {{item.name}}
+        </div>
+        <img class="image" [src]="item.image" alt="No image" />
+        <div [innerHTML]="item.description" class="desc">
+        </div>
+        <a [href]="item.reference" class="reference">
+          Check it out >
+        </a>
+        <div class="footer">
+          <div class="label">
+            <span>100</span>
+            <span class="sublabel">
+              Upvotes
+            </span>
+          </div>
+          <div class="label">
+            <span>Easy</span>
+            <span class="sublabel">
+              Difficulty
+            </span>
+          </div>
+          <div class="label">
+            <span>100</span>
+            <span class="sublabel">
+              Swag Received
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main> -->
