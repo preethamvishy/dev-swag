@@ -1,10 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato|Amatic+SC|Quattrocento+Sans');
+.site-title {
+  font-family: 'Amatic SC', sans-serif;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+  .site-subtitle {
+    font-family: 'Lato', sans-serif;  
+    font-size: 0.3em;
+    font-weight: 1;
+  }
+}
 .container {
-  margin-top: 10em;
+  margin-top: 4em;
   margin-left: 5vw;
   font-family: 'Quattrocento Sans', sans-serif;
-  
 }
+
 .masonry-item {
   min-height: 300px;
   .card::after {
@@ -18,18 +30,28 @@
       margin-bottom: 1em;
       background: white;
       border-radius: 4px;
-      box-shadow: 0 2px 5px rgba(black, 0.2);
-      .image {
-        width: 350px;
-        padding-bottom: 0.5em;
-    }
+      box-shadow: 0 5px 10px rgba(black, 0.2);
+      .img-container {
+        min-height: 200px;
+        .image {
+          width: 350px;
+          padding-bottom: 0.5em;
+        }
+      }
+    
     
     .title {
         font-size: 1.8em;
         font: bold;
+        color: white;
         margin-bottom: 0.5em;
         padding-left: 0.5em; 
-        padding-top: 0.5em; 
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        // background-color: rgb(91, 163, 223); 
+        // background-color: #8BC6EC;
+        // background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        background-image: linear-gradient(45deg, #0093E9 0%, #80D0C7 100%);
     }
     .desc {
         padding: 1em;
@@ -38,10 +60,9 @@
     .reference {
       padding: 1em;
       margin-top: 10px;
-      
     }
     .footer {
-      height: 2.7em;
+      height: 2.6em;
       margin-top: 1em;
       display: flex;
       flex-direction: row;
@@ -56,6 +77,7 @@
         display: block;
         margin: 4px 0 0;
         color: gray;
+        cursor: pointer;
         
         .sublabel {
           display: block;
