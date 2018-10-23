@@ -12,25 +12,37 @@ import { SwagService } from './swag.service';
 export class AppComponent implements OnInit {
   title = 'Dev Swag';
   swagItems;
+  stats = {};
 
   constructor(private swag: SwagService) {
     this.swag.getSwag().subscribe(data => {
       this.swagItems = data;
+      this.swagItems.forEach(element => {
+        console.log(element.name)
+        this.stats[element.name] = {
+          upvotes: 0,
+          difficulty: element.difficulty,
+          received: 0
+        }
+      });
+      console.log(this.stats)
     });
+    
   }
 
   ngOnInit() {
-    const screenHeight = window.screen.height;
-    const screenWidth = window.screen.width;
-
-  // Actual space available in navigator
-  const actualHeight = window.innerHeight;
-  const actualWidth = window.innerWidth;
-  
-
-  console.log(screenHeight, screenWidth, actualHeight, actualWidth)
+    
   }
   ngAfterViewChecked() {
-    window.resizeBy(200,1);
+    window.resizeBy(200, 1);
   }
+
+  upvote(name) {
+    this.stats[name].upvotes+=1; 
+  }
+
+  receive(name) {
+    this.stats[name].received+=1; 
+  }
+  
 }

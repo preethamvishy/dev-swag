@@ -2,9 +2,11 @@
   DeveloperSwag
   <br />
   <div class="site-subtitle">
-      Curated list of swag opportunites for developers. Crowdsourced, by developers, for developers. 🎁
-      <br/>
-      <a style="font-size: 0.8em" href="https://www.github.com/preethamvishy/dev-swag" target="_blank">GitHub</a>
+    Curated list of swag opportunites for developers. Crowdsourced, by developers, for developers. 🎁
+    <br />
+    <a style="font-size: 0.8em" href="https://www.github.com/preethamvishy/dev-swag" target="_blank">Contribute</a>
+    <br />
+    <span style="font-size: 0.5em">Made with ❤️ by <a href="https://www.github.com/preethamvishy" target="_blank">Preetham</a>.</span>
   </div>
 </div>
 <div class="container">
@@ -23,20 +25,23 @@
           Check it out >
         </a>
         <div class="footer">
-          <div class="label">
-            <span>100</span>
-            <span class="sublabel">
+          <div class="label1" (click)="upvote(item.name)">
+            <span>{{stats[item.name].upvotes}}</span>
+            <br />
+            <span class="sublabel" >
               Upvotes
             </span>
           </div>
-          <div class="label">
+          <div class="label2">
             <span>{{item.difficulty}}</span>
+            <br />
             <span class="sublabel">
               Difficulty
             </span>
           </div>
-          <div class="label">
-            <span>100</span>
+          <div class="label3" (click)="receive(item.name)">
+            <span>{{stats[item.name].received}}</span>
+            <br />
             <span class="sublabel">
               Received
             </span>
@@ -46,6 +51,3 @@
     </ngxMasonryItem>
   </ngx-masonry>
 </div>
-<footer class="site-footer">
-  Made with ❤️ by <a href="https://www.github.com/preethamvishy" target="_blank">Preetham</a>.
-</footer>
