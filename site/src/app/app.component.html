@@ -9,37 +9,38 @@
     <span style="font-size: 0.5em">Made with ❤️ by <a href="https://www.github.com/preethamvishy" target="_blank">Preetham</a>.</span>
   </div>
 </div>
-<div class="container">
-  <ngx-masonry class="grid" data-masonry='{ "itemSelector": ".card" , "horizontalOrder": true}'>
-    <ngxMasonryItem class="masonry-item" *ngFor="let item of swagItems">
-      <div class="card">
+<div class="centered">
+  <section class="cards">
+    <article class="card" *ngFor="let item of swagItems">
+      <div class="column">
         <div class="title">
           {{item.name}}
         </div>
-        <div class="img-container">
-          <img class="image" [src]="item.image" />
+        <img [src]="item.image">
+        <div class="card-content">
+          <div>
+            <p [innerHTML]="item.description" class="desc">
+          </div>
+          <a [href]="item.reference" class="reference" target="_blank">
+            Check it out >
+          </a>
         </div>
-        <div [innerHTML]="item.description" class="desc">
-        </div>
-        <a [href]="item.reference" class="reference" target="_blank">
-          Check it out >
-        </a>
         <div class="footer">
-          <div class="label1" (click)="upvote(item.name)">
+          <div class="label1 noselect" (click)="upvote(item.name)">
             <span>{{stats[item.name].upvotes}}</span>
             <br />
-            <span class="sublabel" >
+            <span class="sublabel">
               Upvotes
             </span>
           </div>
-          <div class="label2">
+          <div class="label2 noselect">
             <span>{{item.difficulty}}</span>
             <br />
             <span class="sublabel">
               Difficulty
             </span>
           </div>
-          <div class="label3" (click)="receive(item.name)">
+          <div class="label3 noselect" (click)="receive(item.name)">
             <span>{{stats[item.name].received}}</span>
             <br />
             <span class="sublabel">
@@ -48,6 +49,6 @@
           </div>
         </div>
       </div>
-    </ngxMasonryItem>
-  </ngx-masonry>
+    </article>
+  </section>
 </div>

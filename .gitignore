@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+site/src/assets/data.json
+site/protractor.conf.js
+site/karma.conf.js
+site/e2e/tsconfig.e2e.json
+site/e2e/app.po.ts
+site/e2e/app.e2e-spec.ts
+site/.angular-cli.json
+package-lock.json
+.netlify/state.json
